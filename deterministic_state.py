@@ -14,7 +14,7 @@ class DeterministicState:
         self.name = name
 
     def create_default_reward_matrix(self):
-        self.reward_matrix = np.matrix([[0, 1, 0, 0, 0], [1, 0, 1, 1, 2], [1, 1, 1, 0, 2], [1, 1, 1, 0, 0], [1, 0, 0, 0, 1]])
+        self.reward_matrix = np.matrix([[0, -1, 0, 0, 0], [1, 0, 1, 1, 2], [1, 1, 1, 0, 2], [1, 1, 1, 0, 0], [1, 0, 0, 0, 1]])
         self.cumulative_reward_matrix = np.zeros((self.reward_matrix.shape[0], self.reward_matrix.shape[1]))
 
     def get_policy_matrix(self):
